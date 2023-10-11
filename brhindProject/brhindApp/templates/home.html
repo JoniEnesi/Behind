@@ -1,0 +1,230 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<a id="home"></a>
+<div class="container-fluid" id="cont1">
+    {% if messages %}
+        {% for message in messages %}
+        <div {% if message.tags %} class="aler1 alert alert-{{ message.tags }}" {% endif %} role="alert">
+          {{ message }}
+          {% endfor %}
+        </div>
+    {% endif %}
+    <div class="quote">
+        <h1>Get out and explore</h1>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="carousel-item">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+
+    <div class="container homebutton">
+        <a class="btn btn-light" href="{% url 'readmore' %}">Read more<i class="fa-solid fa-arrow-right ihome"></i></a>
+        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play ihome"></i></a>
+    </div>
+
+
+    <div class="container link">
+        <div class="box">
+            <h4>Get out and explore</h4>
+            <a href="#blog" class="box-link">Read more</a>
+        </div>
+        <div class="box">
+            <h4 class="fontsize">Next expedition to Swiss Alps</h4>
+            <a href="{% url 'book' %}" class="box-link">Read more</a>
+        </div>
+        <div class="box">
+            <h4>Last visit in Iceland</h4>
+            <a href="#article" class="box-link">Read more</a>
+        </div>
+        <div class="box">
+            <h4 class="fontsize">Equipment in mountains</h4>
+            <a href="#readmore" class="box-link">Read more</a>
+        </div>
+    </div>
+
+</div>
+<a id="blog"></a>
+<div class="container-fluid" id="cont2">
+    <div class="firstfoto">
+        <div class="row">
+            <div class="col-12 col-lg-6 photo">
+                    <img src="{% static 'image/foto1.jpg' %}" alt="image">
+            </div>
+            <div class="col-12 col-lg-6 fototext">
+                <h2>Swiss Alps</h2>
+                <p class="p">EXPEDITION</p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+                <ul class="unorder-list">
+                    <li>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>What is Lorem Ipsum</p>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p>Where does it come from</p>
+                    </li>
+                </ul>
+                <a class="btn btn-light" href="{% url 'book' %}">Book tour<i class="fa-solid fa-arrow-right ihome"></i></a>
+            </div>
+        </div>
+    </div>
+    <a id="article"></a>
+    <div class="container news mt-5 mb-5">
+        <h1>Last news</h1>
+        <div class="flex-photo mt-5">
+            <div class="image">
+                <img src="{% static 'image/photo1.jpg' %}" alt="image">
+                <h6><p style="text-decoration: none; color: white">Lorem Ipsum is simply dummy text and typesetting industry.</p></h6>
+                <p><i class="fa-regular fa-clock clock"></i>OCTOBRE 25, 2017</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'image/photo2.jpeg' %}" alt="image">
+                <h6><p style="text-decoration: none; color: white">Lorem Ipsum is simply dummy text.</p></h6>
+                <p><i class="fa-regular fa-clock clock"></i>SEPTEMBER 12, 2017</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'image/photo3.jpeg' %}" alt="image">
+                <h6><p style="text-decoration: none; color: white">Lorem Ipsum is simply dummy text typesetting.</p></h6>
+                <p><i class="fa-regular fa-clock clock"></i>AUGUST 30, 2017</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'image/photo4.jpeg' %}" alt="image">
+                <h6><p style="text-decoration: none; color: white">Lorem Ipsum is simply dummy text typesetting industry.</p></h6>
+                <p><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</p>
+            </div>
+        </div>
+    </div>
+    <a id="readmore"></a>
+    <div class="container-fluid mb-5" id="cont3">
+        <div class="wtn">
+            <h1>What you need?</h1>
+            <div class="wtn-flex">
+                <div class="tent">
+                    <i class="fa-solid fa-tent tend"></i>
+                    <h6>Waterproof tent</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                </div>
+                <div class="tent">
+                    <i class="fa-solid fa-screwdriver-wrench tend"></i>
+                    <h6>Neccesary tools</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                </div>
+                <div class="tent">
+                    <i class="fa-solid fa-briefcase tend"></i>
+                    <h6>Important quipment</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                </div>
+                <div class="tent">
+                    <i class="fa-solid fa-map-location-dot tend"></i>
+                    <h6>Compass or GPS device</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="galery"></a>
+    <div class="container video mt-5">
+        <h1>Videos</h1>
+    </div>
+    <div class="container-fluid vd">
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-arrow-left le-left"></i>
+            <div class="karousel">
+                <div class="imgage">
+                    <img src="{% static 'image/photo6.jpg' %}" alt="image" draggable="false">
+                    <div class="image-text">
+                        <h2>Lorem Ipsum is simply dummy text</h2>
+                        <h6><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</h6>
+                        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</h6>
+                        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play iplay"></i></a>
+                    </div>
+                </div>
+                <div class="imgage">
+                    <img src="{% static 'image/photo7.jpg' %}" alt="image" draggable="false">
+                    <div class="image-text">
+                        <h2>Lorem Ipsum is simply dummy text</h2>
+                        <h6><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</h6>
+                        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</h6>
+                        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play iplay"></i></a>
+                    </div>
+                </div>
+                <div class="imgage">
+                    <img src="{% static 'image/photo8.jpeg' %}" alt="image" draggable="false">
+                    <div class="image-text">
+                        <h2>Lorem Ipsum is simply dummy text</h2>
+                        <h6><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</h6>
+                        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</h6>
+                        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play iplay"></i></a>
+                    </div>
+                </div>
+                <div class="imgage">
+                    <img src="{% static 'image/photo9.jpeg' %}" alt="image" draggable="false">
+                    <div class="image-text">
+                        <h2>Lorem Ipsum is simply dummy text</h2>
+                        <h6><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</h6>
+                        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</h6>
+                        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play iplay"></i></a>
+                    </div>
+                </div>
+                <div class="imgage">
+                    <img src="{% static 'image/photo10.jpg' %}" alt="image" draggable="false">
+                    <div class="image-text">
+                        <h2>Lorem Ipsum is simply dummy text</h2>
+                        <h6><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</h6>
+                        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</h6>
+                        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play iplay"></i></a>
+                    </div>
+                </div>
+                <div class="imgage">
+                    <img src="{% static 'image/photo11.jpg' %}" alt="image" draggable="false">
+                    <div class="image-text">
+                        <h2>Lorem Ipsum is simply dummy text</h2>
+                        <h6><i class="fa-regular fa-clock clock"></i>JUN 7, 2017</h6>
+                        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</h6>
+                        <a class="btn btn-light" href="{% url 'galery' %}">Play video<i class="fa-solid fa-play iplay"></i></a>
+                    </div>
+                </div>
+            </div>
+            <i id="right" class="fa-solid fa-arrow-right ri-right"></i>
+        </div>
+    </div>
+
+    <div class="photo-quote">
+        <h1>Photo Galery</h1>
+        <p>Lorem Ipsum is simply dummy text of <span style="color: greenyellow">10,000 photos</span> the printing and typesetting industry. Lorem Ipsum has been the industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="container button-photo">
+            <a class="btn btn-light" href="{% url 'galery' %}">Show photos<i class="fa-solid fa-arrow-right iplay"></i></a>
+            <a class="btn btn-light" href="https://www.instagram.com/">Instagram<i class="fa-brands fa-instagram iplay"></i></a>
+        </div>
+    </div>
+    <div class="container-fluid cont4 px-0">
+        <img src="{% static 'image/photo12.jpg' %}" alt="image">
+    </div>
+</div>
+
+{% endblock %}

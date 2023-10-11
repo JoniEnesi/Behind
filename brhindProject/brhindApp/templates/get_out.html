@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="containar-fluid" id="read">
+    <div class="read-content">
+        <a href="{% url 'home' %}"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-both"></i>Back</a>
+        <h1>Swiss alps</h1>
+        <div class="row mb-3">
+            <div class="col-12 col-lg-6 s">
+                <img src="{% static 'image/photo13.jpeg' %}" alt="image">
+            </div>
+            <div class="col-12 col-lg-6 s">
+                <p>The Alpine region of Switzerland, conventionally referred to as the Swiss Alps, represents a major natural feature of the country and is, along with the Swiss Plateau and the Swiss portion of the Jura Mountains, one of its three main physiographic regions. The Swiss Alps extend over both the Western Alps and the Eastern Alps, encompassing an area sometimes called Central Alps. While the northern ranges from the Bernese Alps to the Appenzell Alps are entirely in Switzerland, the southern ranges from the Mont Blanc massif to the Bernina massif are shared with other countries such as France, Italy, Austria and Liechtenstein. The Swiss Alps comprise almost all the highest mountains of the Alps, such as Dufourspitze (4,634 m), the Dom (4,545 m), the Liskamm (4,527 m), the Weisshorn (4,506 m) and the Matterhorn (4,478 m). The other following major summits can be found in this list of mountains of Switzerland. Since the Middle Ages, transit across the Alps played an important role in history. The region north of St Gotthard Pass became the nucleus of the Swiss Confederacy in the early 14th century.</p>
+            </div>
+        </div>
+        <hr>
+        <h1>Facts about Swiss alps</h1>
+        <div class="row mt-5">
+            <div class="col-12 col-lg-6 s">
+                <p>The Swiss Alps, officially the Alpine region of Switzerland, is a mountainous region in this beautiful country. Globally famous, you’ll find them south of the Swiss Plateau (northern Switzerland), stretching from Lake Geneva to the Swiss-Austrian border.
+                  This region forms part of Europe’s greater Alps Mountain Range and covers approximately 60% of Switzerland’s surface area. The many peaks in the Swiss Alps are a wonderland for winter sports lovers and those after glorious mountain views. You’ll also find several picturesque villages and towns perfect for spending days having fun.
+                    <br>
+                    <br>
+                    As everyone already knows, you’ll find the Swiss Alps in Switzerland, but where is their exact location? Before focusing on the Swiss Alps, let’s dive into the awe-inspiring Alps. This majestic mountain range is Europe’s tallest, stretching nearly 750 miles across its crescent shape.</p>
+            </div>
+            <div class="col-12 col-lg-6 s">
+                <img src="{% static 'image/photo14.jpg' %}" alt="image">
+            </div>
+        </div>
+        <hr>
+        <h1>Why you should be travel in Swiss?</h1>
+        <div class="row mt-5">
+            <div class="col-12 col-lg-6 s">
+                <p>The Swiss Alps, officially the Alpine region of Switzerland, is a mountainous region in this beautiful country. Globally famous, you’ll find them south of the Swiss Plateau (northern Switzerland), stretching from Lake Geneva to the Swiss-Austrian border.
+                  This region forms part of Europe’s greater Alps Mountain Range and covers approximately 60% of Switzerland’s surface area. The many peaks in the Swiss Alps are a wonderland for winter sports lovers and those after glorious mountain views. You’ll also find several picturesque villages and towns perfect for spending days having fun.
+                    <br>
+                    <br>
+                    As everyone already knows, you’ll find the Swiss Alps in Switzerland, but where is their exact location? Before focusing on the Swiss Alps, let’s dive into the awe-inspiring Alps. This majestic mountain range is Europe’s tallest, stretching nearly 750 miles across its crescent shape.</p>
+            </div>
+            <div class="col-12 col-lg-6 s p">
+                <img src="{% static 'image/photo15.webp' %}" alt="image">
+            </div>
+        </div>
+        <hr>
+        <div class="container book mt-5 mb-5">
+            <a class="btn btn-light" href="{% url 'book' %}">Book tour now<i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

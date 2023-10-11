@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" id="cont6">
+    <div class="pay_now">
+        <h1>Pay now!</h1>
+        <p>You select this ticket</p>
+        <div class="booking-form-box">
+            <div class="flight-1">
+                <div class="row">
+                    <div class="col-12 col-md-4 depcol">
+                        <p>Flight number</p>
+                        <p>{{ flight.flight_number }}</p>
+                        <h6>{{ flight.flight_destinacion }}</h6>
+                        <p>{{ flight.country_1 }}</p>
+                        <p>{{ flight.time }} am</p>
+                        <p>{{ booking.travel_departing }}</p>
+                    </div>
+                    <div class="col-12 col-md-4 pay_i">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                    <div class="col-12 col-md-4 depcol1">
+                        <p>Flight number</p>
+                        <p>{{ flight.flight_number }}</p>
+                        <h6>{{ flight.flight_destinacion2 }}</h6>
+                        <p>{{ flight.country_2 }}</p>
+                        <p>{{ flight.time_1 }} am</p>
+                        <p>{{ booking.travel_returing }}</p>
+                    </div>
+                </div>
+            </div>
+            <p class="pay_p">Your total amount to be paid is : <span style="font-size: 30px;">${{ total }}</span></p>
+            <p style="color: white; text-align: center">Payment options</p>
+            <div class="pay_icon">
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-amex"></i>
+                <i class="fa-brands fa-cc-apple-pay"></i>
+                <i class="fa-brands fa-cc-discover"></i>
+            </div>
+            <div class="terms" >
+                <input type="checkbox" id="change" onclick="showPay()"><p>Terms and Conditions<span> ( Accept the terms and conditions to display the payment button )</span></p>
+            </div>
+            <div class="row" id="show">
+                <p style="color: white; text-align: center; font-size: 14px">Press the "Buy Now" button to pay with paypal or choose another way to pay</p>
+                <div class="col-12" style="padding: 10px 0 25px 25%;">
+                    {{ form.render }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

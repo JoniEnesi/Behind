@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" id="background_galery">
+    <h1>Welcome to Galery</h1>
+    <div class="video_container">
+        <div class="video1"><img src="{% static 'image/photo6.jpg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video1.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo10.jpg' %}" alt="image"></div>
+        <div class="video1"><img src="{% static 'image/foto1.jpg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video2.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo7.jpg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video3.mp4' %}" muted></video></div>
+        <div class="video1"><video src="{% static 'image/video4.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo2.jpeg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video5.mp4' %}" muted></video></div>
+        <div class="video1"><video src="{% static 'image/video6.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo3.jpeg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video7.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo11.jpg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video8.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo4.jpeg' %}" alt="image"></div>
+        <div class="video1"><video src="{% static 'image/video9.mp4' %}" muted></video></div>
+        <div class="video1"><img src="{% static 'image/photo8.jpeg' %}" alt="image"></div>
+    </div>
+
+    <div class="popup_video">
+        <span>&times;</span>
+        <video src="{% static 'image/video1.mp4' %}" muted autoplay controls></video>
+    </div>
+
+    <div class="popup_image">
+        <span>&times;</span>
+        <img src="{% static 'image/foto1.jpg' %}" alt="image">
+    </div>
+
+    <div class="galery_book">
+        <a class="btn btn-light" href="{% url 'book' %}">Book tour<i class="fa-solid fa-arrow-right ihome"></i></a>
+    </div>
+</div>
+
+
+
+<script src="{% static 'JS/main1.js' %}" defer></script>
+{% endblock %}

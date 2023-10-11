@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="internetFromSpace.internetApp.models.Price.objects" />
+          <option value="internetFromSpace.internetApp.models.Message.objects" />
+          <option value="internetFromSpace.internetApp.models.PriceBusiness.objects" />
+          <option value="internetFromSpace.internetApp.models.Reservation.objects" />
+          <option value="internetFromSpace.internetApp.views.internetApp" />
+          <option value="paypal.standard" />
+          <option value="internetFromSpace.internetApp.views.internet_price" />
+          <option value="internetFromSpace.internetApp.models.Reservation.DoesNotExist" />
+          <option value="internetFromSpace.internetApp.views.ST_PP_COMPLETED" />
+          <option value="ST_PP_COMPLITED" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

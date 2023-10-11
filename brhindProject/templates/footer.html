@@ -1,0 +1,43 @@
+
+<!--Nis footer-->
+<a id="aboutme"></a>
+<footer class="container-fluid px-0">
+<div class="info">
+    <div class="row align-items-center">
+      <div class="col">
+        <a class="footer-title" href="{% url 'home' %}">Behind<span class="footer-pik">.</span></a>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      </div>
+      <div class="col w">
+        <h3 style="font-weight: bold">Join our team</h3>
+        {% if user.is_authenticated %}
+          <a class="btn btn-light a1" href="{% url 'logout' %}">Sing out {{ user.username }}<i class="fa-solid fa-paper-plane airplane"></i></a>
+        {% else %}
+          <a class="btn btn-light a" href="{% url 'singup' %}">Sing up<i class="fa-solid fa-paper-plane airplane"></i></a>
+        {% endif %}
+      </div>
+    </div>
+</div>
+<div class="container copy">
+  <div class="footer_copy">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#article">Article</a></li>
+      <li><a href="#galery">Galery</a></li>
+      <li><a href="#aboutme">About</a></li>
+    </ul>
+  </div>
+  <div class="footer_copy1">
+    <ul>
+      <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter social"></i></a></li>
+      <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f social"></i></a></li>
+      <li><a href="https://www.google.com/"><i class="fa-brands fa-google-plus-g social"></i></a></li>
+      <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram social"></i></a></li>
+      <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube social"></i></a></li>
+    </ul>
+  </div>
+</div>
+</footer>
+<!-- Mbaron footer -->
+

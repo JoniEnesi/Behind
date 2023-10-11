@@ -1,0 +1,67 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div id="preloader"></div>
+
+<div class="container-fluid" id="cont6">
+    <div class="white_border">
+        {% for flight in flights %}
+        <div class="booking-form-box">
+            <div class="flight-1">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12 col-md-4 depcol">
+                            <p>Flight number</p>
+                            <p>{{ flight.flight_number }}</p>
+                            <h6>{{ flight.flight_destinacion }}</h6>
+                            <p>{{ flight.country_1 }}</p>
+                            <p>{{ flight.time }} am</p>
+                            <p>{{ booking.travel_departing }}</p>
+                        </div>
+                        <div class="col-12 col-md-4 fliop">
+                            <a href="{% url 'pay' booking=booking.pk flight=flight.pk %}">${{ flight.price }} </a>
+                            <i class="fa-solid fa-plane"></i>
+                        </div>
+                        <div class="col-12 col-md-4 depcol1">
+                            <p>Flight number</p>
+                            <p>{{ flight.flight_number }}</p>
+                            <h6>{{ flight.flight_destinacion2 }}</h6>
+                            <p>{{ flight.country_2 }}</p>
+                            <p>{{ flight.time_1 }} am</p>
+                            <p>{{ booking.travel_returing }}</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<div class="frame-display">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<script>
+
+    var loader = document.getElementById('preloader');
+
+    window.addEventListener('load', function (){
+        loader.style.display = 'none';
+    })
+
+</script>
+
+{% endblock %}

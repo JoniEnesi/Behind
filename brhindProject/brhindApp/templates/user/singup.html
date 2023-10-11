@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" id="cont5">
+    {% if messages %}
+    {% for message in messages %}
+    <div {% if message.tags %} class="aler1 alert alert-{{ message.tags }}" {% endif %} role="alert">
+      {{ message }}
+      {% endfor %}
+    </div>
+    {% endif %}
+        <div class="container singup">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-md-3">
+                    <div class="singup_box">
+                        <div class="key_sing">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <h1>Sing up</h1>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    {% for login in form %}
+                                    <div class="input_box">
+                                        <label>{{ login.label }}</label>
+                                        <div>{{ login }}</div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="forgot">
+                                <a href="#">Forgot password?</a>
+                                <a href="{% url 'register' %}">Register now!</a>
+                            </div>
+                            <div class="btn-sing">
+                                <button type="submit" class="btn btn-light">Sing Up<i class="fa-solid fa-right-to-bracket"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

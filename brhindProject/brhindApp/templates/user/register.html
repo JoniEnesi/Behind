@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" id="cont5">
+    <div class="container singup">
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-3">
+                <div class="register_box">
+                    <a href="{% url 'singup' %}"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-both"></i>Sing-Up</a>
+                    <div class="key_sing1">
+                        <i class="fa-regular fa-id-card"></i>
+                    </div>
+                    <h1>Register</h1>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12 col-md-3 col-lg-6 regi">
+                                {% for register in form %}
+                                <div class="input_box1">
+                                    <label>{{ register.label }}</label>
+                                    <div class="reg">{{ register }}</div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="register_btn">
+                           <button type="submit" class="btn btn-light">Register<i class="fa-regular fa-circle-check"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--        <div class="register">-->
+<!--            <a href="{% url 'singup' %}"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-both"></i>Sing-Up</a>-->
+<!--            <div class="key_sing1">-->
+<!--                <i class="fa-regular fa-id-card"></i>-->
+<!--            </div>-->
+<!--            <h1>Register</h1>-->
+<!--            <form method="POST">-->
+<!--                {% csrf_token %}-->
+<!--                <div class="row">-->
+<!--                    <div class="register_place">-->
+<!--                        {% for register in form %}-->
+<!--                        <div class="input_box1">-->
+<!--                          <label>{{ register.label }}</label>-->
+<!--                          <div class="register_box">-->
+<!--                             {{ register }}-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        {% endfor %}-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="register_btn">-->
+<!--                   <button type="submit" class="btn btn-light">Register<i class="fa-regular fa-circle-check"></i></button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div id="preloader"></div>
+
+<div class="container-fluid" id="cont6">
+    {% if messages %}
+        {% for message in messages %}
+        <div {% if message.tags %} class="aler1 alert alert-{{ message.tags }}" {% endif %} role="alert">
+          {{ message }}
+          {% endfor %}
+        </div>
+    {% endif %}
+    <div class="booking-form-box1">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="radio-btn" >
+                <label for="roundtrip"></label>
+                <input type="radio" id="roundtrip" class="btn" name="check" checked="checked"><span>Roundtrip</span>
+            </div>
+
+            <div class="booking-form">
+                <label>Flying form</label>
+                <span>Tirana</span>
+                <br>
+                <label for="select">Flying to</label>
+                <select id="select" name="select">
+                    <option value="Berna">Berna/Swiss</option>
+                    <option value="Lusano">Lusano/Swiss</option>
+                    <option value="Turin">Turin/Italy</option>
+                    <option value="Milano">Milano/Italy</option>
+                </select>
+            </div>
+
+            <div class="input-grp">
+                <label for="depart">Departing</label>
+                <input type="date" id="depart" name="depart" class="form-control select-date">
+            </div>
+
+            <div class="input-grp">
+                <label for="returing">Returing</label>
+                <input type="date" id="returing" name="returning" class="form-control select-date">
+            </div>
+
+            <div class="input-grp">
+                <label for="adults">Adults</label>
+                <input type="number" id="adults" name="adults" class="form-control" value="1">
+            </div>
+
+            <div class="input-grp">
+                <button type="submit" class="btn btn-primary flight">Show Flight</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="frame-display">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0NMbZHqMDk?si=zty5FWUWumHS-BVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<script>
+
+    var loader = document.getElementById('preloader');
+
+    window.addEventListener('load', function (){
+        loader.style.display = 'none';
+    })
+
+</script>
+
+{% endblock %}
